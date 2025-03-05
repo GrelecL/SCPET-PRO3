@@ -1,0 +1,57 @@
+bajt=1073741824
+bajts=1048576
+prenos={
+    "1":56.25, #vse vrednosti so MB/s
+    "2":108.34,
+    "3":300,
+    "4":675,
+    "5":5750,
+}
+
+print("*"*60)
+print("Pozdravljeni," + "\n" + "Pred vami je program za izračun hitrosti prenosa na podlagi vnešene velikosti datoteke v GB in izbiro WiFi verzije." + "\n")
+print("*"*60)
+print("Izbira WiFi verzije:" + "\n" + "1 - Wifi 4(802.11n)" +"\n" + "2 - WiFi 5(802.11ac)" + "\n" + "3 - WiFi 6(802.11ax)" + "\n" + "4 - WiFi 6E" + "\n"+ "5 - WiFi 7(802.11be)" + "\n")
+
+
+izbira=int(input("Vnesi izbiro hitrosti prenosa: "))
+
+if izbira == 1:
+    datoteka=int(input("Vnesi velikost datoteke v GB: "))
+    datbajt=datoteka*bajt
+    hitrost=prenos["wifi4"]*bajts #pretvorba v bajte/sekundo
+    casprenosa=datoteka*hitrost
+    casprenosa=casprenosa/60
+    print("Čas prenosa za datoteko veliko " + str(datoteka) + "GB, traja " + str(casprenosa) + "minut.")
+
+elif izbira == 2:
+    datoteka=int(input("Vnesi velikost datoteke v GB: "))
+    datbajt=datoteka*bajt
+    hitrost=prenos["wifi5"]*bajts #pretvorba v bajte/sekundo
+    casprenosa=datoteka*hitrost
+    casprenosa=casprenosa/60
+    print("Čas prenosa za datoteko veliko " + str(datoteka) + "GB, traja " + str(casprenosa) + "minut.")
+
+elif izbira == 3:
+    datoteka=int(input("Vnesi velikost datoteke v GB: "))
+    datbajt=datoteka*bajt
+    hitrost=prenos["wifi6"]*bajts #pretvorba v bajte/sekundo
+    casprenosa=datoteka*hitrost
+    casprenosa=casprenosa/60
+    print("Čas prenosa za datoteko veliko " + str(datoteka) + "GB, traja " + str(casprenosa) + "minut.")
+    
+elif izbira == 4:
+    datoteka=int(input("Vnesi velikost datoteke v GB: "))
+    datbajt=datoteka*bajt
+    hitrost=prenos["wifi6e"]*bajts #pretvorba v bajte/sekundo
+    casprenosa=datoteka*hitrost
+    casprenosa=casprenosa/60
+    print("Čas prenosa za datoteko veliko " + str(datoteka) + "GB, traja " + str(casprenosa) + "minut.")
+
+elif izbira == 5:
+    datoteka=int(input("Vnesi velikost datoteke v GB: "))
+    datbajt=datoteka*bajt
+    hitrost=prenos["wifi7"]*bajts #pretvorba v bajte/sekundo
+    casprenosa=datoteka*hitrost
+    casprenosa=casprenosa/60
+    print("Čas prenosa za datoteko veliko " + str(datoteka) + "GB, traja " + str(casprenosa) + "minut.")

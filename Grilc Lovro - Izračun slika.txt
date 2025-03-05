@@ -1,0 +1,16 @@
+#Predstavitev programa
+print("Pozdravljeni v programu za izračun zmanjšanih dimenzij fotografije.")
+
+# Vnos dimenzij fotografije
+x = int(input("Vnesi širino fotografije: "))
+y = int(input("Vnesi višino fotografije: "))
+
+# Vnos procenta zmanšanja
+z = int(input("Vnesi procent zmanšanja: "))
+
+# Izračun
+x = x - (x * z / 100)
+y = y - (y * z / 100)
+
+# Končni rezultat izpisa
+print("Pri", z ,"procentnem zmanšanju dobimo sliko veliko",x ,"široko in", y,"visoko fotografijo.")

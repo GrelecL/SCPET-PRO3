@@ -1,0 +1,13 @@
+import random
+
+print("Pozdravljeni v programu ohranjevalnika baterije.")
+print(" ")
+print("Program generira naključno napolnjenost baterije in vam pove ali bo vklopil ohranjevalnik, če besedila ni pomeni da ohranjevalnika ne bo vklopil")
+nivobat=random.randrange(1,100)
+print(f"Nivo baterije je {nivobat} %.")
+def program(nivobat):
+    if nivobat <= 10:
+        print("Vaša baterija je skoraj prazna, vklapljam ohranjevalnik baterije.")
+    else:
+        exit()
+program(nivobat)
