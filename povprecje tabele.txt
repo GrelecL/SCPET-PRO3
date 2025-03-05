@@ -1,0 +1,5 @@
+#tabela
+tab=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+povp=sum(tab)/len(tab)#sum funkcija ki je tudi v excelu delimo z dolžino da dobimo povprečje
+povp=str(povp) #pretvorimo da lahko izpišemo
+print("Povprečje je "+ povp +".") #izpis vrednosti

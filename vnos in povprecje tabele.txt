@@ -1,0 +1,36 @@
+tab = []
+
+def dolzinavnos():
+    while True:
+        dolzina = input("Vnesi dolžino tabele: ")
+        try:
+            dolzina = int(dolzina)
+            if dolzina > 0:
+                return dolzina
+            else:
+                print("Dolžina ne sme imeti 0.")
+        except ValueError:
+            print("Ponovno vnesi dolžino. Mora biti celo število.")
+
+def vnoselementov(dolzina):
+    for i in range(dolzina):
+        while True:
+            element = input(f"Vnesi element {i + 1}/{dolzina}: ")
+            try:
+                element = float(element)  # pretvori v decimalke
+                tab.append(element)
+                break
+            except ValueError:
+                print("Element mora biti število. Poskusite znova.")
+
+def izracunpovp():
+    if len(tab) == 0:
+        print("Tabela je prazna. Povprečja ni mogoče izračunati.")
+        return
+    povp = sum(tab) / len(tab)  # Izračun povprečja
+    print(f"Povprečje je {povp:.2f}.")  # pokaze dva decimalna mesta
+
+# definicije oz vrednsti + se poklice funkcijo
+dolzina = dolzinavnos()
+vnoselementov(dolzina)
+izracunpovp()

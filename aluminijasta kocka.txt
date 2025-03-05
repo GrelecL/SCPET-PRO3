@@ -1,0 +1,16 @@
+def racunanje():
+    vnos=input("Vnesi površino stranice v cm: ")
+    try:
+        stranica = float(vnos)
+    except ValueError:
+        print("Vnesite površino stranice kot pozitivno število.")
+    ploscina = 6*stranica**2
+    #prostirnina izracun
+    prostornina= stranica**3
+    #racun teza
+    teza=prostornina*2700#gostota na kg/m3
+    
+    #print vsega
+    print(f"teza kocke je {teza}g, ploščina kocke pa je {ploscina}cm na 2.")
+    
+racunanje()
