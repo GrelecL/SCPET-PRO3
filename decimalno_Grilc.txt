@@ -1,0 +1,15 @@
+def kalkulacija():
+    vnos = input("Vnesi stevilo: ")
+    try:
+        stevilo = float(vnos)  # Pretvori vneseni niz v float
+        preverjanje(stevilo)  # Pokliči funkcijo za preverjanje
+    except ValueError:
+        print(f"Napaka, vrednost '{vnos}' ni številka.")
+
+def preverjanje(stevilo):
+    if stevilo % 1 != 0:
+        print(f"Število {stevilo} je decimalno.")
+    else:
+        print(f"Število {stevilo} ni decimalno.")
+
+kalkulacija()
