@@ -1,0 +1,21 @@
+list = []
+
+cxd = int(input("Vnesi število črk: "))
+
+def vnos_crk(cxd):
+    if 10 <= cxd <= 20:
+        for i in range(10,cxd+1):
+            try:
+                stevilo = str(input("Vnesi črko abecede v angleščini: "))
+                list.append(stevilo)
+                list.sort()
+                print(list)
+                i +=1
+            except ValueError:
+                print("Poizkusi ponovno!")
+                vnos_crk()
+    else:
+        print("10-20 izberi.")
+        vnos_crk()
+            
+vnos_crk(cxd)

@@ -1,0 +1,14 @@
+list = []
+def vnos_crk():
+    for i in range(1,16):
+        try:
+            stevilo = str(input("Vnesi črko abecede v angleščini: "))
+            list.append(stevilo)
+            list.sort()
+            print(list)
+            i +=1
+        except ValueError:
+            print("Poizkusi ponovno!")
+            vnos_crk()
+            
+vnos_crk()
