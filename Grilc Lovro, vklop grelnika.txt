@@ -1,0 +1,20 @@
+
+#funkcija ki računa
+def racunanje(temp, humid):
+    x = (temp - 32) / 1.8
+    y = humid
+    if x <= 18 or y >= 40:
+        print(f"Vklopi grelnik, temperatura je {x:.2f} °C, vlaga pa je {y}%.")
+    else:
+        print("Grelnika ni potrebno vklopiti.")
+#začetek programa
+print("Pozdravljeni.")
+print("Vnesite temperaturo in vlažnost, da preverite, ali je treba vklopiti grelnik.")
+
+# Vnos podatkov in poizkus
+try:
+    temp = float(input("Vnesi temperaturo v farenheit: "))
+    humid = int(input("Vnesi vlago v prostoru: "))
+    racunanje(temp, humid)
+except ValueError:
+    print("Prosim, vnesite veljavne številke.")
