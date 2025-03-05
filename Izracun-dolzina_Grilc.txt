@@ -1,0 +1,16 @@
+def dolzina():
+    while True:
+        stevilo_str = input("Vnesi celo število: ")
+        try:
+            stevilo = int(stevilo_str)
+            dolzina = len(str(stevilo))
+            return dolzina
+        except ValueError:
+            print("Napaka: Vnesi prosim celo število.")
+
+#izpis final rezultata
+rezultat = dolzina()
+print("Dolžina vnesenega števila je:", rezultat)
+
+#poklic funkcijre
+dolzina()
