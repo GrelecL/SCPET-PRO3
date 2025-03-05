@@ -1,0 +1,12 @@
+# Program za zbiranje meritev
+meritve = []
+
+stMeritev = int(input("Koliko meritev želite vnesti? "))#vnos stevila meritev / limit
+
+for i in range(stMeritev):
+    trenutnaMeritev = float(input(f"Vnesi vrednost {i+1} od {stMeritev}: "))
+    meritve.append(trenutnaMeritev)
+
+# Urejanje in print
+meritve.sort()  # Urejanje od najmanjše do največje
+print("Urejene meritve:", meritve)

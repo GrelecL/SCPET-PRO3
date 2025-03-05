@@ -1,0 +1,13 @@
+# Program za zbiranje meritev
+meritve = []
+i = 0
+
+while i < 5:
+    trenutnaMeritev = input("Vnesi vrednost v voltih: ")
+    if trenutnaMeritev == "":  # Preveri, če je vnos prazen
+        print("Napaka: vnos ne sme biti prazen.")
+        continue  # Vrni na začetek zanke
+    meritve.append(float(trenutnaMeritev))  # Dodaj veljaven vnos v seznam
+    i += 1
+
+print("Seznam meritev:", meritve)

@@ -1,0 +1,12 @@
+# Program za zbiranje meritev
+meritve = []
+
+# Preberi število meritev
+steviloMeritev = int(input("Koliko meritev želite vnesti? "))
+
+# Vnos meritev uporabnika
+for i in range(steviloMeritev):
+    trenutnaMeritev = float(input(f"Vnesi vrednost {i+1} od {steviloMeritev}: "))
+    meritve.append(trenutnaMeritev)
+
+print("Seznam meritev:", meritve)

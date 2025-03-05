@@ -1,0 +1,10 @@
+# program za vnos meritev
+meritve = [] #prazen seznam
+i = 0 
+# Vnos meritev
+while i < 5:  # Ponovi 5-krat
+    trenutnaMeritev = float(input("Vnesi vrednost v voltih: "))  
+    meritve.append(trenutnaMeritev) #doda v seznam
+    i += 1 
+# Izpis rezultatov
+print("Seznam meritev:", meritve) 
