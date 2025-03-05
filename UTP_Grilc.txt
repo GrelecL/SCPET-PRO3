@@ -1,0 +1,30 @@
+# Cene UTP kablov so na meter
+cena_utp5e = 0.84
+cena_utp6 = 0.81
+
+def racunanje():
+    vnos = int(input("Vnesi število metrov zaokroženo na najbližjo polno vrednost: "))
+    izbor = int(input("Izberite verzijo UTP kabla (pritisnite 1 za CAT5e ali 2 za CAT6): "))
+    if izbor == 1:
+        izracun = round(vnos * cena_utp5e)
+    elif izbor == 2:
+        izracun = round(vnos * cena_utp6)
+    else:
+        print("Napaka pri vnosu. Začnite še enkrat.")
+        racunanje()
+        return  # Ne gre naprej in ponovi
+
+    print(f"Vaša cena za {vnos} metrov kabla je {izracun} EUR.")
+    ponovitev()
+
+def ponovitev():
+    print("Želite ponoviti izračun? (1-DA, 2-NE)")
+    meni = int(input("Vnesite izbiro: "))
+    if meni == 1:
+        racunanje()
+    else:
+        print("Hvala za uporabo.")
+        exit()
+
+# poklici funkcijo
+racunanje()
