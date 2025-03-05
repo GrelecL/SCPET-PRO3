@@ -1,0 +1,11 @@
+geslo="mfnltsrNLLVKIxw"
+def vnos_gesla():
+    vnos=input("Vnesite geslo: ")
+
+    if vnos == geslo:
+        print("geslo je pravilno. Dobrodošli.")
+        
+    else:
+        print("Geslo ni pravilno. Poizkusite ponovno.")
+    
+vnos_gesla()
