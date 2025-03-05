@@ -1,0 +1,20 @@
+#konfig za ruter
+konfiguracija = {
+    "ime":"MojUsmerjevalnik",
+    "tip":"router",
+    "ip_naslov":"192.168.1.1",
+    "maska":"255.255.255.0",
+    "protokoli": { #slovar znotraj slovarja za protokole
+        "http":80,
+        "https":443,
+        "ssh":22
+    },
+    "dns": ["8.8.8.8","8.8.4.4"], #seznam domain name server
+    "dhcp": True,
+    "varnost":{ #varnost up ime in geslo, ssh kljuci
+        "uporabnisko_ime":"admin",
+        "geslo":"moja_geslo",
+        "ssh_ključi":"path/to/ssh/keys"
+    }
+}
+print(konfiguracija["varnost"]["geslo"])

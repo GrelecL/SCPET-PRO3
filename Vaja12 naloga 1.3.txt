@@ -1,0 +1,58 @@
+#konfig za ruter
+konfiguracija = {
+    "ime":"MojUsmerjevalnik",
+    "tip":"router",
+    "ip_naslov":"192.168.1.1",
+    "maska":"255.255.255.0",
+    "protokoli": { #slovar znotraj slovarja za protokole
+        "http":80,
+        "https":443,
+        "ssh":22
+    },
+    "dns": ["8.8.8.8","8.8.4.4"], #seznam domain name server
+    "dhcp": True,
+    "varnost":{ #varnost up ime in geslo, ssh kljuci
+        "uporabnisko_ime":"admin",
+        "geslo":"moja_geslo",
+        "ssh_ključi":"path/to/ssh/keys"
+    }
+}
+
+def izpis_konfig():
+	print("Pozdravljeni v programu za izpis konfiguracije ruterja.")
+	print("Izberite med naslednjimi možnostmi z vnosom zaporedne številke:")
+	print("1 Ime Usmerjevalnika")
+	print("2 IP konfiguracija")
+	print("3 Podprti protokoli")
+	print("4 Konfiguracija dns in dhcp")
+	print("5 Konfiguracija varnosti")
+	izbira = input(int("Vnesite izbiro: "))
+	
+	try:
+            izbira = int(input("Vnesite izbiro: ")) # spremenljivka izbira mora biti integer
+            if 1 <= izbira <= 5: # preveri, če je izbira med 1 in 5
+                break # če je, prekini zanko
+            else:
+                print("Napačna izbira. Prosimo, vnesite število med 1 in 5.")
+        except ValueError:
+            print("Napačen vnos. Prosimo, vnesite število.")
+
+    if izbira == 1:
+        print(konfiguracija['ime'])
+    elif izbira == 2:
+        print(f"IP naslov: {konfiguracija['ip_naslov']}")
+        print(f"Maska: {konfiguracija['maska']}")
+    elif izbira == 3:
+        print("Podprti protokoli:")
+        for protokol, vrata in konfiguracija['protokoli'].items():
+            print(f"  - {protokol}: {vrata}")
+    elif izbira == 4:
+        print(f"DNS strežniki: {konfiguracija['dns']}")
+        print(f"DHCP: {'Omogočen' if konfiguracija['dhcp'] else 'Onemogočen'}")
+    elif izbira == 5:
+        print("Varnostne nastavitve:")
+        print(f"  - Uporabniško ime: {konfiguracija['varnost']['uporabnisko_ime']}")
+        print(f"  - Geslo: {konfiguracija['varnost']['geslo']}")
+        print(f"  - SSH ključi: {konfiguracija['varnost']['ssh_ključi']}")
+
+izpis_konfig()
