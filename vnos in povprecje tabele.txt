@@ -1,3 +1,5 @@
+print("Program za vnos v tabelo in izračun povprečja")
+
 tab = []
 
 def dolzinavnos():
@@ -30,7 +32,7 @@ def izracunpovp():
     povp = sum(tab) / len(tab)  # Izračun povprečja
     print(f"Povprečje je {povp:.2f}.")  # pokaze dva decimalna mesta
 
-# definicije oz vrednsti + se poklice funkcijo
+# definicije oz vrednsti + trigger za program oz funkcijo
 dolzina = dolzinavnos()
 vnoselementov(dolzina)
 izracunpovp()

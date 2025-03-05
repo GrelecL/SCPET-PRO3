@@ -1,0 +1,20 @@
+print("Program za izračun povprečja tabele")
+
+# Prazna tabela za shranjevanje števil
+tab = []
+
+# Uporabnik vnese število elementov v tabeli
+n = int(input("Vnesite število elementov v tabeli: "))
+
+# Uporabnik vnese elemente tabele
+for i in range(n):
+    element = float(input(f"Vnesite {i+1}. element: "))
+    tab.append(element)
+
+# Izračun povprečja
+if len(tab) > 0:  #ali je tabela prazna
+    povp = sum(tab) / len(tab)
+    povp_str = str(povp)
+    print("Povprečje je " + povp_str + ".")
+else:
+    print("Tabela je prazna, povprečja ni.")
